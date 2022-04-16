@@ -1,4 +1,6 @@
 # CS598_DLH_Project
+#### Maria DeMuri | NetID: mdemuri2 | mdemuri2@illinois.edu   
+#### Salman Yousaf | NetID: syousaf2 | syousaf2@illinois.edu
 Deep Learning Health Care Project: Statistical supervised meta-ensemble algorithm for medical record linkage
 
 This repository contains the full code for the CS 598 Deep Learning for Healthcare project. The main goal of the project was to reproduce the results of the paper "Statistical supervised meta-ensemble algorithm for data linkage". The vast majority of the code to reproduce the paper’s results was sourced from the paper’s GitHub repository https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. [1]
