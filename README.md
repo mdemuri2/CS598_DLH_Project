@@ -19,6 +19,8 @@ Run Preparing_FEBRL_and_ePBRN_Datasets.ipynb to create the FEBRL dataset and the
 ## Step 2: Reproduce the results from the paper (Table 4 and Table 6)
 Run UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated.
 
+Note: please ignore the .ipynb_checkpoints folder
+
 ## Works Cited
 
 [1] 	K. Vo, J. Jonnagaddala and S.-T. Liaw, "Statistical supervised meta-ensemble algorithm for medical record linkage," Journal of Biomedical Informatics, vol. 95, no. 1532-0464, 31 May 2019. 
