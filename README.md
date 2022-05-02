@@ -75,7 +75,7 @@ __Outputs:__
 1. sensitivity_to_amount_of_training_data.jpeg – A graph of the sensitivity results 
 
 ## 3. Supporting Analysis 
-### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the Supporting_Analysis/FEBRL_Class_Perf_When_Using_the_FEBRL_Dataset_Provided_on_Authors_GitHub Folder
+### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the FEBRL_Class_Perf_When_Using_the_FEBRL_Dataset_Provided_on_Authors_GitHub Folder
 Similar to UNSW_Linkage.ipynb to reproduce the paper’s results, the UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors file reproduces the results of the paper’s Table 4 and Table 6 corresponding the FEBRL dataset. However rather than regenerating the FEBRL dataset from the Python Record Linkage Toolkit library, it uses the FEBRL datasets published on the authors’ GitHub. [1] As stated above, the regenerated FEBRL datasets are slightly different than the FEBRL datasets published on the authors’ GitHub. It is expected that different datasets will lead to different results. Thus, to help eliminate this factor of variation in the results when attempting to reproduce the study, the FEBRL datasets published on the authors’ GitHub were used. Because these datasets are likely to be the most similar to the datasets used in the original study. 
 
 ```diff
