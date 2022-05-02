@@ -21,16 +21,82 @@ For the ePBRN dataset, the University of New South Wales ePBRN has been extracti
 __
 
 We used the example files (ePBRN_D_original.csv and ePBRN_F_original.csv) and the data processing code that were published on the authors’ GitHub to produce the ePBRN datasets ( ePBRN_D_dup.csv and ePBRN_F_dup.csv) that were fed to the models. __Since these datasets are not reflective of the datasets used in the study, it is not expected that these datasets will produce comparable results. We included this dataset as part of the study to evaluate how models performed when given a different dataset.__
+```diff
++Action Item:
+```
+Run the python file Preparing_FEBRL_and_ePBRN_Datasets.ipynb.
 
-<span style="color: blue">__Action Item:__</span>
+__Inputs:__
+1. ePBRN_D_original.csv – Stored in the Data_to_produce_ePBRN_dataset folder 
+(Attained from the paper’s GitHub Data_to_produce_ePBRN_dataset/ePBRN_D_original.csv  [1]. This is not the actual dataset that the authors’ used to generate their results. Instead, it is an example of actual dataset)
+2. ePBRN_F_original.csv – Stored in the Data_to_produce_ePBRN_dataset folder
+(Attained from the paper’s GitHub Data_to_produce_ePBRN_dataset/ePBRN_F_original.csv [1]. This is not the actual dataset that the authors’ used to generate their results. Instead, it is an example of actual dataset)
 
-## Step 2: Reproduce the results from the paper (Table 4 and Table 6)
-Run UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated.
+__Outputs:__
+1. febrl3_UNSW.csv
+(As noted above this file does not exactually match the febrl3_UNSW.csv file published on the authors’ GitHub  [1]. This is likely due to using different variations of the Python Record Linkage Toolkit library)
+2. febrl4_UNSW.csv
+(As noted above this file does not exactually match the febrl4_UNSW.csv file published on the authors’ GitHub  [1]. This is likely due to using different variations of the Python Record Linkage Toolkit library)
+3. ePBRN_D_dup.csv
+(As noted above this file does not reflect the dataset used in by the authors to produce their results. As a result, the results derived from this dataset are expected to differ from the results noted in the paper.)
+4. ePBRN_F_dup.csv
+(As noted above this file does not reflect the dataset used in by the authors to produce their results. As a result, the results derived from this dataset are expected to differ from the results noted in the paper.)
 
-Note: please ignore the .ipynb_checkpoints folder
+## 1.2 Reproduce the results from the paper (Table 4 and Table 6)
+UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated. As previously stated, the results derived from the FEBRL dataset are expected to be comparable to the results reported in the paper because the regenerated FEBRL datasets are similar FEBRL datasets published on the author’s GitHub (but not exactly the same). The regenerated ePBRN datasets are not representative of the ePBRN datasets used to produce the paper’s results. Thus, the results derived from the ePBRN dataset are expected to differ from the results noted in the paper
+```diff
++Action Item:
+```
+Run the python file UNSW_Linkage.ipynb.
+
+__Inputs:__
+1. febrl3_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+2. febrl4_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+3. ePBRN_D_dup.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the Data_to_produce_ePBRN_dataset folder
+4. ePBRN_F_dup.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the Data_to_produce_ePBRN_dataset folder
+
+__Outputs:__
+
+No files outputted
+
+## Additional Ablations:
+This additional ablation file assesses the neural network models’ sensitivity to the structure of hidden layers. This analysis was performed on the base learners “NN” and “NN-bag”. Since “NN-bag” is a component of the ensemble model, the effect of the hidden layer changes was also monitored for the ensemble model. This analysis was performed using the FEBRL dataset.
+
+```diff
++Action Item:
+```
+Run the python file Ablation_Sensitivity_To_Hidden_Layer_Structure.
+
+__Inputs:__
+1. febrl3_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+2. febrl4_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+
+__Outputs:__
+1. sensitivity_to_amount_of_training_data.jpeg – A graph of the sensitivity results 
+
+## Supporting Analysis 
+### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the Supporting_Analysis Folder
+Similar to UNSW_Linkage.ipynb to reproduce the paper’s results, the UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors file reproduces the results of the paper’s Table 4 and Table 6 corresponding the FEBRL dataset. However rather than regenerating the FEBRL dataset from the Python Record Linkage Toolkit library, it uses the FEBRL datasets published on the authors’ GitHub. [1] As stated above, the regenerated FEBRL datasets are slightly different than the FEBRL datasets published on the authors’ GitHub. It is expected that different datasets will lead to different results. Thus, to help eliminate this factor of variation in the results when attempting to reproduce the study, the FEBRL datasets published on the authors’ GitHub were used. Because these datasets are likely to be the most similar to the datasets used in the original study. 
+
+```diff
++Action Item:
+```
+Run the python file UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors.
+
+Inputs:
+1. febrl3_UNSW_provided_by_authors.csv
+(This file is equivalent to the febrl3_UNSW.csv file on the authors’ GitHub [1])
+2. febrl4_UNSW_provided_by_authors.csv 
+(This file is equivalent to the febrl4_UNSW.csv file on the authors’ GitHub [1])
+
+Outputs:
+
+No files outputted
+
+
 
 ## Works Cited
-
-[1] 	K. Vo, J. Jonnagaddala and S.-T. Liaw, "Statistical supervised meta-ensemble algorithm for medical record linkage," Journal of Biomedical Informatics, vol. 95, no. 1532-0464, 31 May 2019. 
-
-[2] 	P. Christen, "Febrl - An open source data cleaning, deduplication and record linkage system with a graphical user interface," Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, p. 1065–1068, August 2008. 
+[1] 	K. Vo, J. Jitendra and L. Siaw-Teng, "Statistical supervised meta-ensemble algorithm for medical record linkage," Journal of Biomedical Informatics, 2019. 
+[2] 	J. de Bruin, "RecordLinkage: powerful and modular Python record linkage toolkit," 19 April 2022. [Online]. Available: https://github.com/J535D165/recordlinkage.
+[3] 	K. Vo, J. Jonnagaddala and S.-T. Liaw, "Medical-Record-Linkage-Ensemble," 16 February 2019. [Online]. Available: https://github.com/ePBRN/Medical-Record-Linkage-Ensemble/.
+[4] 	P. Christen, "Febrl - An open source data cleaning, deduplication and record linkage system with a graphical user interface," Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, p. 1065–1068, August 2008. 
