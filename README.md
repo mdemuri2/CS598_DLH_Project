@@ -24,7 +24,7 @@ We used the example files (ePBRN_D_original.csv and ePBRN_F_original.csv) and th
 ```diff
 +Action Item:
 ```
-Run the python file Preparing_FEBRL_and_ePBRN_Datasets.ipynb.
+__Run the python file Preparing_FEBRL_and_ePBRN_Datasets.ipynb.__
 
 __Inputs:__
 1. ePBRN_D_original.csv – Stored in the Data_to_produce_ePBRN_dataset folder 
@@ -47,7 +47,7 @@ UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and
 ```diff
 +Action Item:
 ```
-Run the python file UNSW_Linkage.ipynb.
+__Run the python file UNSW_Linkage.ipynb.__
 
 __Inputs:__
 1. febrl3_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
@@ -65,7 +65,7 @@ This additional ablation file assesses the neural network models’ sensitivity 
 ```diff
 +Action Item:
 ```
-Run the python file Ablation_Sensitivity_To_Hidden_Layer_Structure.
+__Run the python file Ablation_Sensitivity_To_Hidden_Layer_Structure.__
 
 __Inputs:__
 1. febrl3_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
@@ -81,15 +81,15 @@ Similar to UNSW_Linkage.ipynb to reproduce the paper’s results, the UNSW_Linka
 ```diff
 +Action Item:
 ```
-Run the python file UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors.
+__Run the python file UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors.__
 
-Inputs:
+__Inputs:__
 1. febrl3_UNSW_provided_by_authors.csv
 (This file is equivalent to the febrl3_UNSW.csv file on the authors’ GitHub [1])
 2. febrl4_UNSW_provided_by_authors.csv 
 (This file is equivalent to the febrl4_UNSW.csv file on the authors’ GitHub [1])
 
-Outputs:
+__Outputs:__
 
 No files outputted
 
@@ -97,6 +97,9 @@ No files outputted
 
 ## Works Cited
 [1] 	K. Vo, J. Jitendra and L. Siaw-Teng, "Statistical supervised meta-ensemble algorithm for medical record linkage," Journal of Biomedical Informatics, 2019. 
+
 [2] 	J. de Bruin, "RecordLinkage: powerful and modular Python record linkage toolkit," 19 April 2022. [Online]. Available: https://github.com/J535D165/recordlinkage.
+
 [3] 	K. Vo, J. Jonnagaddala and S.-T. Liaw, "Medical-Record-Linkage-Ensemble," 16 February 2019. [Online]. Available: https://github.com/ePBRN/Medical-Record-Linkage-Ensemble/.
+
 [4] 	P. Christen, "Febrl - An open source data cleaning, deduplication and record linkage system with a graphical user interface," Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, p. 1065–1068, August 2008. 
