@@ -59,7 +59,7 @@ __Outputs:__
 
 No files outputted
 
-## Additional Ablations:
+## 2. Additional Ablations:
 This additional ablation file assesses the neural network models’ sensitivity to the structure of hidden layers. This analysis was performed on the base learners “NN” and “NN-bag”. Since “NN-bag” is a component of the ensemble model, the effect of the hidden layer changes was also monitored for the ensemble model. This analysis was performed using the FEBRL dataset.
 
 ```diff
@@ -74,8 +74,8 @@ __Inputs:__
 __Outputs:__
 1. sensitivity_to_amount_of_training_data.jpeg – A graph of the sensitivity results 
 
-## Supporting Analysis 
-### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the Supporting_Analysis Folder
+## 3. Supporting Analysis 
+### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the Supporting_Analysis/FEBRL_Class_Perf_When_Using_the_FEBRL_Dataset_Provided_on_Authors_GitHub Folder
 Similar to UNSW_Linkage.ipynb to reproduce the paper’s results, the UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors file reproduces the results of the paper’s Table 4 and Table 6 corresponding the FEBRL dataset. However rather than regenerating the FEBRL dataset from the Python Record Linkage Toolkit library, it uses the FEBRL datasets published on the authors’ GitHub. [1] As stated above, the regenerated FEBRL datasets are slightly different than the FEBRL datasets published on the authors’ GitHub. It is expected that different datasets will lead to different results. Thus, to help eliminate this factor of variation in the results when attempting to reproduce the study, the FEBRL datasets published on the authors’ GitHub were used. Because these datasets are likely to be the most similar to the datasets used in the original study. 
 
 ```diff
