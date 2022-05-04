@@ -114,6 +114,27 @@ __Outputs:__
 
 No files outputted
 
+__Table of results:__
+The script will produce the following tables of results. Note, the numerical values will change with every run dues to the inherent randomness of the method.
+
+*FEBRL Blocking Results*
+
+| Blocking Criterion  | Measure  | FEBRL Results (Mean of 10 Runs)  |
+| -------------  | -------------  |  ------------- |
+| Surname  | nc  | 170843 |
+| Surname  | pc  | 66.500000 |
+| Surname  | rr  | 99.658280 |
+| Given name  | nc  | 154898 |
+| Given name  | pc  | 65.740000 |
+| Given name  | rr  | 99.690173 |
+| Postcode  | nc | 53197 |
+| Postcode  | pc | 84.380000 |
+| Postcode  | rr | 99.893595 |
+| All  | nc | 372073 |
+| All  | pc | 97.880000 |
+| All  | rr | 99.255780 |
+
+
 
 
 ## Works Cited
