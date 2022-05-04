@@ -34,8 +34,15 @@ For the ePBRN dataset, the University of New South Wales ePBRN has been extracti
 __
 
 We used the example files (ePBRN_D_original.csv and ePBRN_F_original.csv) and the data processing code that were published on the authors’ GitHub to produce the ePBRN datasets ( ePBRN_D_dup.csv and ePBRN_F_dup.csv) that were fed to the models. __Since these datasets are not reflective of the datasets used in the study, it is not expected that these datasets will produce comparable results. We included this dataset as part of the study to evaluate how models performed when given a different dataset.__
+
 ```diff
-+Action Item:
++Action Item: Data download instruction
+```
+1. Create a folder called Data_to_produce_ePBRN_dataset within the root folder of where you will be downloading and run the python scripts
+2. Download the ePBRN_D_original.csv and the ePBRN_F_original.csv from the paper's GitHub (https://github.com/ePBRN/Medical-Record-Linkage-Ensemble/) and save them within the  Data_to_produce_ePBRN_dataset folder
+
+```diff
++Action Item: Running script 
 ```
 __Run the python file Preparing_FEBRL_and_ePBRN_Datasets.ipynb.__
 
@@ -57,8 +64,9 @@ __Outputs:__
 
 ## 1.2 Training and Evaluating: Reproduce the results from the paper (Table 4 and Table 6)
 UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated. As previously stated, the results derived from the FEBRL dataset are expected to be comparable to the results reported in the paper because the regenerated FEBRL datasets are similar FEBRL datasets published on the author’s GitHub (but not exactly the same). The regenerated ePBRN datasets are not representative of the ePBRN datasets used to produce the paper’s results. Thus, the results derived from the ePBRN dataset are expected to differ from the results noted in the paper
+
 ```diff
-+Action Item:
++Action Item: Running script 
 ```
 __Run the python file UNSW_Linkage.ipynb.__
 
@@ -76,7 +84,7 @@ No files outputted
 This additional ablation file assesses the neural network models’ sensitivity to the structure of hidden layers. This analysis was performed on the base learners “NN” and “NN-bag”. Since “NN-bag” is a component of the ensemble model, the effect of the hidden layer changes was also monitored for the ensemble model. This analysis was performed using the FEBRL dataset.
 
 ```diff
-+Action Item:
++Action Item: Running script 
 ```
 __Run the python file Ablation_Sensitivity_To_Hidden_Layer_Structure.__
 
@@ -92,7 +100,7 @@ __Outputs:__
 Similar to UNSW_Linkage.ipynb to reproduce the paper’s results, the UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors file reproduces the results of the paper’s Table 4 and Table 6 corresponding the FEBRL dataset. However rather than regenerating the FEBRL dataset from the Python Record Linkage Toolkit library, it uses the FEBRL datasets published on the authors’ GitHub. [1] As stated above, the regenerated FEBRL datasets are slightly different than the FEBRL datasets published on the authors’ GitHub. It is expected that different datasets will lead to different results. Thus, to help eliminate this factor of variation in the results when attempting to reproduce the study, the FEBRL datasets published on the authors’ GitHub were used. Because these datasets are likely to be the most similar to the datasets used in the original study. 
 
 ```diff
-+Action Item:
++Action Item: Running script  
 ```
 __Run the python file UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors.__
 
