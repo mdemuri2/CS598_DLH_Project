@@ -102,7 +102,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *FEBRL Regen. Classification Results - Means*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 94.970645  | 99.683286 | 97.269678 | 273.9 |
 | SVM-bag  | 96.263328  | 96.263328 | 97.928231 | 206.4 |
 | NN  |  96.596002  | 99.650593 | 98.099327 | 189.0 |
@@ -113,7 +113,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *FEBRL Regen. Classification Results - Standard deviation*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 0.290977  | 0.013707 | 0.149483 | 15.459625 |
 | SVM-bag  | 	0.399282  | 0.009138 | 0.204158 | 20.784610 |
 | NN  |  0.271229  | 0.006130 | 0.138707 | 14.071247 |
@@ -141,7 +141,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *ePBRN Classification Results - Means*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 33.962085  | 99.226667 | 50.598924 | 5089.2 |
 | SVM-bag  | 38.986579  | 98.998095 | 55.936975 | 4096.4 |
 | NN  | 69.698121  | 97.333333 | 81.229126 | 1180.9 |
@@ -152,7 +152,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *ePBRN Classification Results - Standard deviation*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 0.778565  | 0.017457 | 0.870004 | 15.459625 |
 | SVM-bag  | 	0.843877  | 0.038285 | 0.866809 | 20.784610 |
 | NN  |  0.347078  | 0.000000 | 0.235776 | 14.071247 |
@@ -217,7 +217,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *FEBRL Auth. Classification Results - Means*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 95.096582  | 99.734369 | 97.359691 | 264.8 |
 | SVM-bag  | 95.490281  | 99.734369 | 97.565787 | 243.6 |
 | NN  |  93.027086  | 99.570903 | 96.187637 | 386.3 |
@@ -228,7 +228,7 @@ The script will produce the following tables of results. Note, the numerical val
 
 *FEBRL Auth. Classification Results - Standard deviation*
 | Model  | pr(%)  | re(%)  | fs(%)  | fc  |
-| -------------  | -------------  |  ------------- | ------------- |
+| ------ | -----  | ------ | ------ | --- |
 | SVM  | 	0.465962  | 0.000000 | 0.244357 | 25.179357 |
 | SVM-bag  | 	0.389443  | 0.000000 | 0.203285 | 20.832667 |
 | NN  |  0.257596  | 0.015827 | 0.136244 | 14.352700 |
