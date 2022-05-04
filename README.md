@@ -80,6 +80,87 @@ __Outputs:__
 
 No files outputted
 
+__Table of results:__
+The script will produce the following tables of results. Note, the numerical values will change with every run dues to the inherent randomness of the method.
+
+*FEBRL Regen. Blocking Results*
+
+| Blocking Criterion  | Measure  | FEBRL Results (Mean of 10 Runs)  |
+| -------------  | -------------  |  ------------- |
+| Surname  | nc  | 170843 |
+| Surname  | pc  | 66.500000 |
+| Surname  | rr  | 99.658280 |
+| Given name  | nc  | 154898 |
+| Given name  | pc  | 65.740000 |
+| Given name  | rr  | 99.690173 |
+| Postcode  | nc | 53197 |
+| Postcode  | pc | 84.380000 |
+| Postcode  | rr | 99.893595 |
+| All  | nc | 372073 |
+| All  | pc | 97.880000 |
+| All  | rr | 99.255780 |
+
+*FEBRL Regen. Classification Results - Means*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 94.970645  | 99.683286 | 97.269678 | 273.9 |
+| SVM-bag  | 96.263328  | 96.263328 | 97.928231 | 206.4 |
+| NN  |  96.596002  | 99.650593 | 98.099327 | 189.0 |
+| NN-bag  | 96.967586  | 99.636289 | 98.283779 | 170.3 |
+| LR  | 86.656968  | 99.822231 | 92.768180 | 762.5 |
+| LR-bag  |  87.628162  | 99.814058 | 93.318908 | 700.2 |
+| Stack+Bag  |  97.821222  | 99.609726 | 98.707265 | 127.7 |
+
+*FEBRL Regen. Classification Results - Standard deviation*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 0.290977  | 0.013707 | 0.149483 | 15.459625 |
+| SVM-bag  | 	0.399282  | 0.009138 | 0.204158 | 20.784610 |
+| NN  |  0.271229  | 0.006130 | 0.138707 | 14.071247 |
+| NN-bag  | 0.130552  | 0.008173 | 0.065836 | 6.633250 |
+| LR  | 1.462529  | 0.030376 | 0.814931 | 91.318125 |
+| LR-bag  |  1.403998 | 0.029540 | 0.776850 | 86.348133 |
+| Stack+Bag  |  0.197872  | 0.011004 | 0.097296 | 9.695360 |
+
+*ePBRN Blocking Results*
+
+| Blocking Criterion  | Measure  | FEBRL Results (Mean of 10 Runs)  |
+| -------------  | -------------  |  ------------- |
+| Surname  | nc  | 32785 |
+| Surname  | pc  | 55.592967 |
+| Surname  | rr  | 99.952446 |
+| Given name  | nc  | 254696 |
+| Given name  | pc  | 59.221848 |
+| Given name  | rr  | 99.630571 |
+| Postcode  | nc | 79556 |
+| Postcode  | pc | 94.051627 |
+| Postcode  | rr | 99.884606 |
+| All  | nc | 363574 |
+| All  | pc | 98.204265 |
+| All  | rr | 99.472647 |
+
+*ePBRN Classification Results - Means*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 33.962085  | 99.226667 | 50.598924 | 5089.2 |
+| SVM-bag  | 38.986579  | 98.998095 | 55.936975 | 4096.4 |
+| NN  | 69.698121  | 97.333333 | 81.229126 | 1180.9 |
+| NN-bag  | 70.777419  | 97.333333 | 81.957394 | 1125.0 |
+| LR  | 59.677290  | 97.600000 | 74.066237 | 1794.2 |
+| LR-bag  |  60.345107  | 97.592381 | 74.575984 | 1746.8 |
+| Stack+Bag  | 73.925839  | 97.287619 | 84.012545 | 972.0 |
+
+*ePBRN Classification Results - Standard deviation*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 0.778565  | 0.017457 | 0.870004 | 15.459625 |
+| SVM-bag  | 	0.843877  | 0.038285 | 0.866809 | 20.784610 |
+| NN  |  0.347078  | 0.000000 | 0.235776 | 14.071247 |
+| NN-bag  | 0.356078  | 0.000000 | 0.238962 | 6.633250 |
+| LR  | 0.301553  | 0.000000 | 0.232245 | 91.318125 |
+| LR-bag  |  0.355789 | 0.022857 | 0.267191 | 86.348133 |
+| Stack+Bag  |  0.296642  | 0.015238 | 0.188759 | 13.747727 |
+
 ## 2. Additional Ablations:
 This additional ablation file assesses the neural network models’ sensitivity to the structure of hidden layers. This analysis was performed on the base learners “NN” and “NN-bag”. Since “NN-bag” is a component of the ensemble model, the effect of the hidden layer changes was also monitored for the ensemble model. This analysis was performed using the FEBRL dataset.
 
@@ -117,7 +198,7 @@ No files outputted
 __Table of results:__
 The script will produce the following tables of results. Note, the numerical values will change with every run dues to the inherent randomness of the method.
 
-*FEBRL Blocking Results*
+*FEBRL Auth. Blocking Results*
 
 | Blocking Criterion  | Measure  | FEBRL Results (Mean of 10 Runs)  |
 | -------------  | -------------  |  ------------- |
@@ -134,7 +215,27 @@ The script will produce the following tables of results. Note, the numerical val
 | All  | pc | 97.880000 |
 | All  | rr | 99.255780 |
 
+*FEBRL Auth. Classification Results - Means*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 95.096582  | 99.734369 | 97.359691 | 264.8 |
+| SVM-bag  | 95.490281  | 99.734369 | 97.565787 | 243.6 |
+| NN  |  93.027086  | 99.570903 | 96.187637 | 386.3 |
+| NN-bag  | 93.075951  | 99.556600 | 96.207060 | 384.2 |
+| LR  | 91.867286  | 99.754802 | 95.647753 | 444.4 |
+| LR-bag  |  92.021193  | 99.750715 | 95.729193 | 435.7 |
+| Stack+Bag  |  96.868159  | 99.495300 | 98.163815 | 182.2 |
 
+*FEBRL Auth. Classification Results - Standard deviation*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| -------------  | -------------  |  ------------- | ------------- |
+| SVM  | 	0.465962  | 0.000000 | 0.244357 | 25.179357 |
+| SVM-bag  | 	0.389443  | 0.000000 | 0.203285 | 20.832667 |
+| NN  |  0.257596  | 0.015827 | 0.136244 | 14.352700 |
+| NN-bag  | 0.262914  | 0.015959 | 0.137260 | 14.456832 |
+| LR  | 0.578806  | 0.009138 | 0.312181 | 33.346664 |
+| LR-bag  |  0.586991 | 0.008173 | 0.315323 | 33.615473 |
+| Stack+Bag  |  0.366441  | 0.013084 | 0.191381 | 19.339080 |
 
 
 ## Works Cited
