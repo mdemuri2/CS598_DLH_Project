@@ -5,14 +5,27 @@
 
 This repository contains the full code for the CS 598 Deep Learning for Healthcare project. The main goal of the project was to reproduce the results of the paper "Statistical supervised meta-ensemble algorithm for data linkage". The vast majority of the code to reproduce the paper’s results was sourced from the paper’s GitHub repository https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. [1]
 
-All the code in this repository uses Python 3.10 with these prerequisite packages: numpy, pandas, sklearn, and recordlinkage. The following versions of the packages were used:
+### Citation to the Original Paper
+K. Vo, J. Jitendra and L. Siaw-Teng, "Statistical supervised meta-ensemble algorithm for medical record linkage," Journal of Biomedical Informatics, 2019. 
+
+### Link to the Original Paper’s Repository 
+https://github.com/ePBRN/Medical-Record-Linkage-Ensemble
+
+### Dependencies
+All the code in this repository uses Python 3.10 with these prerequisite packages: numpy, pandas, sklearn, and recordlinkage. The following packages were used:
 1. numpy 1.22.0
 2. pandas 1.4.2
 3. sklearn 1.0.2
 4. recordlinkage v0.15
+5. scipy 1.8.0
+6. matplotlib 3.5.2
+7. collections
+8. math
+9. statistics
+10. IPython
 
 ## 1. Reproducing the Paper’s Results
-### 1.1 Prepare the Datasets
+### 1.1 Preprocessing the Datasets
 The paper uses two datasets, including the freely extensible biomedical record linkage (FEBRL) datasets and the electronic practice-based research network (ePBRN) dataset.
 
 The FEBRL dataset is an opensource dataset provided by the Python Record Linkage Toolkit library. The FEBRL dataset was developed with an error generator. [2] The authors provided code to use the Python Record Linkage Toolkit library and process the data. However, the regenerated FEBRL datasets are slightly different than the FEBRL datasets published on the author's GitHub repository. [1]  This is because the generation of the FEBRL is dependent on the version of Python Record Linkage Toolkit library used at the time.  When consulting with Jitendra Jonnagaddala, one of the paper's authors, it was stated that a reasonable explanation for this observed difference between the FEBRL datasets published on the authors' GitHub and the current regeneration of the datasets using the Python Record Linkage Toolkit library was due to changes in the library. The paper was published in 2019 and the most recent change to the library was committed on April 19, 2022. [2]
@@ -42,7 +55,7 @@ __Outputs:__
 4. ePBRN_F_dup.csv
 (As noted above this file does not reflect the dataset used in by the authors to produce their results. As a result, the results derived from this dataset are expected to differ from the results noted in the paper.)
 
-## 1.2 Reproduce the results from the paper (Table 4 and Table 6)
+## 1.2 Training and Evaluating: Reproduce the results from the paper (Table 4 and Table 6)
 UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated. As previously stated, the results derived from the FEBRL dataset are expected to be comparable to the results reported in the paper because the regenerated FEBRL datasets are similar FEBRL datasets published on the author’s GitHub (but not exactly the same). The regenerated ePBRN datasets are not representative of the ePBRN datasets used to produce the paper’s results. Thus, the results derived from the ePBRN dataset are expected to differ from the results noted in the paper
 ```diff
 +Action Item:
