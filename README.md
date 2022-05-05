@@ -175,7 +175,7 @@ __Inputs:__
 2. febrl4_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
 
 __Outputs:__
-1. sensitivity_to_amount_of_training_data.jpeg – A graph of the sensitivity results 
+1. sensitivity_to_hidden_layer_structure.jpeg – A graph of the sensitivity results 
 
 ### 2.2 Evaluating Varied Neural Network Configurations
 Our second ablation is in the notebook Ablation_NN.ipynb.
