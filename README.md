@@ -62,7 +62,7 @@ __Outputs:__
 4. ePBRN_F_dup.csv
 (As noted above this file does not reflect the dataset used in by the authors to produce their results. As a result, the results derived from this dataset are expected to differ from the results noted in the paper.)
 
-## 1.2 Training and Evaluating: Reproduce the results from the paper (Table 4 and Table 6)
+### 1.2 Training and Evaluating: Reproduce the results from the paper (Table 4 and Table 6)
 UNSW_Linkage.ipynb to reproduce the paper’s results. Specifically, Table 4 and Table 6 from the paper are recreated. As previously stated, the results derived from the FEBRL dataset are expected to be comparable to the results reported in the paper because the regenerated FEBRL datasets are similar FEBRL datasets published on the author’s GitHub (but not exactly the same). The regenerated ePBRN datasets are not representative of the ePBRN datasets used to produce the paper’s results. Thus, the results derived from the ePBRN dataset are expected to differ from the results noted in the paper
 
 ```diff
@@ -162,6 +162,7 @@ The script will produce the following tables of results. Note, the numerical val
 | Stack+Bag  |  0.296642  | 0.015238 | 0.188759 | 13.747727 |
 
 ## 2. Additional Ablations:
+### 2.1 Neural Network's Sensitivity to the Structure of Hidden Layers
 This additional ablation file assesses the neural network models’ sensitivity to the structure of hidden layers. This analysis was performed on the base learners “NN” and “NN-bag”. Since “NN-bag” is a component of the ensemble model, the effect of the hidden layer changes was also monitored for the ensemble model. This analysis was performed using the FEBRL dataset.
 
 ```diff
@@ -175,6 +176,43 @@ __Inputs:__
 
 __Outputs:__
 1. sensitivity_to_amount_of_training_data.jpeg – A graph of the sensitivity results 
+
+### 2.2 Evaluating Varied Neural Network Configurations
+Our second ablation is in the notebook Ablation_NN.ipynb.
+Here, we evaluated the perfomance of competing Neural Network model configurations on the FEBRL Regen. (regenerated) dataset. Specifically, the following three model configuations were prepared:
+1. NN with Logistic activation function (original study
+used ’RELU’).
+2. NN with ’ADAM’ solver (original study used ’lbfgs’).
+3. NN with ’SGD’ (Stochastic Gradient Descent) solver.
+
+All other configuration parameters were left unchanged except those identified above. These models were then benchmarked on the FEBRL Regn. dataset dataset over 10 runs and reported the following averaged results (along with their respective standard deviations).
+
+```diff
++Action Item: Running script 
+```
+__Run the python file Ablation_NN.__
+
+
+__Inputs:__
+1. febrl3_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+2. febrl4_UNSW.csv - Produced by the Preparing_FEBRL_and_ePBRN_Datasets.ipynb file and stored in the root folder 
+
+__Outputs:__
+1. A table of evaluations on the three competing custom NN models averaged over 10 runs. Means and standard deviations of the results have been reported. 
+
+
+__Table of results:__
+The script will produce the following tables of results. Note, the numerical values will change with every run dues to the inherent randomness of the method.
+
+*NN Ablations - Custom Models Results*
+| Model  | pr(%)  | re(%)  | fs(%)  | fc  |
+| ------ | -----  | ------ | ------ | --- |
+| NN - Original  | 96.49 | 99.65 | 98.04 | 194.6 |
+| NN - Log. Activation  | 98.68 | 99.36 | 99.016 | 96.6 |
+| NN - Adam Solver |  98.78 | 99.10 | 98.94 | 104.4 |
+| NN - SGD Solver  | 98.85 | 98.80 | 98.82 | 115.5 |
+
+As shown above, the results of this ablation provide us with some exciting observations. It can be noted that all our custom configurations of the original NN model perfom significantly better than the one used in the original study. Moreover, they even perform better than every other model in the original study, including the ensemble model claimed by the authors as the best performer. Specifically, our NN model using Adam solver performs with the highest precision (98.85%) while Logistic Activation provides the smallest number of False Counts (96.6).
 
 ## 3. Supporting Analysis 
 ### 3.1 UNSW_Linkage_Original_FEBRL_Provided_By_The_Authors – In the FEBRL_Class_Perf_When_Using_the_FEBRL_Dataset_Provided_on_Authors_GitHub Folder
